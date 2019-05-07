@@ -33,116 +33,121 @@
              font-family: "Selador";
              src: url("Selador-Regular.otf") format("opentype");
          }
-             body {
-                 background: #f4e1da;
-                 margin: 0;
-             }
+         html {
+           font-family: system-ui, -apple-system, sans-serif;
+           font-weight: 200;
+         }
 
-             body > *,
-             a,
-             a:active,
-             a:visited {
-                 font-family: sans-serif;
-             }
+         body {
+           background: #f4e1da;
+           margin: 0;
+         }
 
-             .intro {
-                 position: fixed;
-                 top: 50%;
-                 left: 50%;
-                 margin-top: -1em;
-                 transform: translate(-50%, -50%);
-             }
+         body > *,
+         a,
+         a:active,
+         a:visited {
+         }
 
-             .intro h1 {
-                 font-family: 'Selador', sans-serif;
-                 /* font-family: 'Nova Cut', cursive; */
-                 letter-spacing: -1px;
-                 font-size: 80px;
-                 font-weight: 400;
-                 line-height: 1em;
-                 color: rgba(138, 31, 31, 0.8);
-             }
+         .intro {
+           position: fixed;
+           top: 50%;
+           left: 50%;
+           margin-top: -1em;
+           transform: translate(-50%, -50%);
+         }
 
-             .intro h2 {
-                 position: relative;
-                 left: 0.2em;
-                 
-                 font-size: 15px;
-                 letter-spacing: 0.05em;
-                 font-weight: 400;
-                 color: rgba(138, 31, 31, 0.6);
-             }
+         .intro h1 {
+           font-family: 'Selador';
+           /* font-family: 'Nova Cut', cursive; */
+           letter-spacing: -1px;
+           font-size: 80px;
+           font-weight: 400;
+           line-height: 1em;
+           color: rgba(138, 31, 31, 0.8);
+         }
 
-             .intro h1,
-             .intro h2 {
-                 margin: 0;
-             }
+         .intro h2 {
+           position: relative;
+           left: 0.5em;
+           
+           font-size: 15px;
+           letter-spacing: 0.05em;
+           font-weight: 400;
+           color: rgba(138, 31, 31, 0.6);
+         }
 
-             .links {
-                 list-style: none;
-                 margin: 0;
-                 padding: 0;
+         .intro h1,
+         .intro h2 {
+           margin: 0;
+         }
 
-                 text-transform: uppercase;
-             }
+         .links {
+           list-style: none;
+           margin: 0;
+           padding: 0;
 
-             .links li {
-                 position: fixed;
-                 display: block;
-             }
+           text-transform: uppercase;
+         }
 
-             .links li a {
-                 display: inline-block;
-                 margin: 1em;
+         .links li {
+           position: fixed;
+           display: block;
+         }
 
-                 color: rgba(138, 31, 31, 0.6);
-                 font-size: 11px;
-                 letter-spacing: 0.2em;
-                 text-decoration: none;
-                 padding-bottom: 0.4em;
-                 padding-left: 0.15em;
-                 border-bottom: 1px solid rgba(138, 31, 31, 0.8);
-             }
+         .links li a {
+           display: inline-block;
+           margin: 1em;
+
+           color: rgba(138, 31, 31, 0.6);
+           font-size: 11px;
+           font-weight: 700;
+           letter-spacing: 0.2em;
+           text-decoration: none;
+           padding-bottom: 0.4em;
+           padding-left: 0.15em;
+           border-bottom: 1px solid rgba(138, 31, 31, 0.8);
+         }
 
          /* .links li a:hover {
             border-bottom-style: solid;
             } */
-             
-             .links li:nth-child(1) {
-                 left: 63%
-             }
+         
+         .links li:nth-child(1) {
+           left: 63%
+         }
 
-             .links li:nth-child(2) {
-                 transform: rotate(90deg);
-                 right: 0;
-                 top: 60vh;
-                 width: 0;
-                 height: 0;
-             }
+         .links li:nth-child(2) {
+           transform: rotate(90deg);
+           right: 0;
+           top: 60vh;
+           width: 0;
+           height: 0;
+         }
 
-             .links li:nth-child(3) {
-                 bottom: 0;
-                 left: 30vw;
-             }
-             .links li:nth-child(3) a {
-                 bottom: 0;
-                 left: 30vw;
-                 padding-top: 0.5em;
-                 border-top: 1px solid rgba(138, 31, 31, 0.8);
-                 padding-bottom: 0;
-                 border-bottom: none;
-             }
+         .links li:nth-child(3) {
+           bottom: 0;
+           left: 30vw;
+         }
+         .links li:nth-child(3) a {
+           bottom: 0;
+           left: 30vw;
+           padding-top: 0.5em;
+           border-top: 1px solid rgba(138, 31, 31, 0.8);
+           padding-bottom: 0;
+           border-bottom: none;
+         }
          /* .links li:nth-child(3) a:hover {
             border-top-style: solid;
             } */
 
-             .links li:nth-child(4) {
-                 transform: rotate(-90deg);
-                 left: 0;
-                 bottom: 63vh;
-                 width: 0;
-                 height: 0;
-             }
+         .links li:nth-child(4) {
+           transform: rotate(-90deg);
+           left: 0;
+           bottom: 63vh;
+           width: 0;
+           height: 0;
+         }
         </style>
     </head>
     <body>
