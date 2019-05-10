@@ -42,20 +42,14 @@
            /* background: #f4e1da; */
            background-image: url('/gradient.svg');
            margin: 0;
-           animation: Gradient-shift 24s infinite ease-in-out alternate;
+           animation: Gradient-shift 8s infinite ease-in-out alternate;
          }
          @keyframes Gradient-shift {
            from {
-             background-position: top 0px left 0px;
+             background-position: top 0% left 0%;
              background-size: 400%;
            }
-           25% {
-             background-size: 500%;
-           }
            50% {
-             background-size: 1000%;
-           }
-           75% {
              background-size: 500%;
            }
            to {
