@@ -1,200 +1,202 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Colleen Baisa</title>
-        <meta name="viewport" content="width=device-width">
-        
-        <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#eccac1">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Colleen Baisa</title>
+    <meta name="viewport" content="width=device-width">
 
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Nova+Cut" rel="stylesheet"> 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#eccac1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-        <style>
-         /* 
-            color swatches 
-            
-            soft pink
-            #eccac1
-            
-            reddish
-            rgba(138, 31, 31, 0.8)
-          */ 
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nova+Cut" rel="stylesheet">  -->
 
-         @font-face {
-             font-family: "Selador";
-             src: url("Selador-Regular.otf") format("opentype");
-         }
-         html {
-           font-family: system-ui, -apple-system, sans-serif;
-           font-weight: 200;
-         }
+    <style>
+    /*
+       color swatches
 
-         body {
-           /* background: #f4e1da; */
-           background-image: url('/gradient.svg');
-           margin: 0;
-           animation: Gradient-shift 12s infinite ease-in-out alternate;
-         }
-         @keyframes Gradient-shift {
-           from {
-             background-position: top 0% left 0%;
-             background-size: 400%;
-           }
-           50% {
-             background-size: 500%;
-           }
-           to {
-             background-position: top 100% left 100%;
-             background-size: 400%;
-           }
-         }
+       soft pink
+       #eccac1
 
-         body > *,
-         a,
-         a:active,
-         a:visited {
-         }
+       reddish
+       rgba(138, 31, 31, 0.8)
+     */
 
-         .intro {
-           position: fixed;
-           top: 50%;
-           left: 50%;
-           margin-top: -1em;
-           transform: translate(-50%, -50%);
-         }
+    @font-face {
+      font-family: "Selador";
+      src: url("Selador-Regular.otf") format("opentype");
+    }
+    html {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 200;
+    }
 
-         .intro h1,
-         .intro h2,
-         .intro h3 {
-           margin: 0;
-         }
+    body {
+      /* background: #f4e1da; */
+      margin: 0;
+    }
 
-         .intro h1 {
-           font-family: 'Selador';
-           /* font-family: 'Nova Cut', cursive; */
-           letter-spacing: -1px;
-           font-size: 80px;
-           font-weight: 400;
-           line-height: 0.9;
-           margin-bottom: 0.1em;
-           color: rgba(138, 31, 31, 0.8);
-           white-space: nowrap;
-         }
-         @media screen and (max-width: 600px) {
-           .intro h1 {
-             white-space: normal;
-           }
-         }
+    .gradient-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 400%;
+      height: 400%;
+      background-image: url('/gradient.svg');
+      background-position: top left;
+      background-size: 100%;
+      transform: scale(1) rotate(0deg) translate(-5%, -5%);
+      animation: Gradient-shift 24s infinite cubic-bezier(.65,.05,.36,1) alternate;
+    }
 
-         .intro h2,
-         .intro h3 {
-           position: relative;
-           left: 0.3em;
-           
-           font-size: 15px;
-           letter-spacing: 0.05em;
-           font-weight: 400;
-           color: rgba(138, 31, 31, 0.6);
-           line-height: 1.2;
-           margin-bottom: 1em;
-         }
+    @keyframes Gradient-shift {
+      from {
+        transform: scale(1) rotate(0deg) translate(-5%, -5%);
+      }
+      50% {
+        transform: scale(1.25) rotate(15deg) translate(-37.5%, -37.5%);
+      }
+      to {
+        transform: scale(1) rotate(0deg) translate(-70%, -70%);
+      }
+    }
 
-         .links {
-           list-style: none;
-           margin: 0;
-           padding: 0;
+    .intro {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -1em;
+      transform: translate(-50%, -50%);
+    }
 
-           text-transform: uppercase;
-         }
+    .intro h1,
+    .intro h2,
+    .intro h3,
+    .intro h4 {
+      margin: 0;
+    }
 
-         .links li {
-           position: fixed;
-           display: block;
-         }
+    .intro h1 {
+      font-family: 'Selador';
+      /* font-family: 'Nova Cut', cursive; */
+      letter-spacing: -1px;
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 0.9;
+      margin-bottom: 0.1em;
+      color: rgba(138, 31, 31, 0.8);
+      white-space: nowrap;
+    }
+    @media screen and (max-width: 600px) {
+      .intro h1 {
+        white-space: normal;
+      }
+    }
 
-         .links li a {
-           display: inline-block;
-           margin: 1em;
+    .intro h2,
+    .intro h3,
+    .intro h4 {
+      position: relative;
+      left: 0.3em;
 
-           color: rgba(138, 31, 31, 0.6);
-           font-size: 11px;
-           font-weight: 550;
-           letter-spacing: 0.2em;
-           text-decoration: none;
-           padding-bottom: 0.4em;
-           padding-left: 0.15em;
-           border-bottom: 1px solid rgba(138, 31, 31, 0.8);
-         }
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      color: rgba(138, 31, 31, 0.6);
+      line-height: 1.2;
+      margin-bottom: 1em;
+    }
 
-         /* .links li a:hover {
-            border-bottom-style: solid;
-            } */
-         
-         .links li:nth-child(1) {
-           left: 63%
-         }
+    .links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-         .links li:nth-child(2) {
-           transform: rotate(90deg);
-           right: 0;
-           top: 60vh;
-           width: 0;
-           height: 0;
-         }
+      text-transform: uppercase;
+    }
 
-         .links li:nth-child(3) {
-           bottom: 0;
-           left: 30vw;
-         }
-         .links li:nth-child(3) a {
-           bottom: 0;
-           left: 30vw;
-           padding-top: 0.5em;
-           border-top: 1px solid rgba(138, 31, 31, 0.8);
-           padding-bottom: 0;
-           border-bottom: none;
-         }
-         /* .links li:nth-child(3) a:hover {
-            border-top-style: solid;
-            } */
+    .links li {
+      position: fixed;
+      display: block;
+    }
 
-         .links li:nth-child(4) {
-           transform: rotate(-90deg);
-           left: 0;
-           bottom: 63vh;
-           width: 0;
-           height: 0;
-         }
-        </style>
-    </head>
+    .links li a {
+      display: inline-block;
+      margin: 1em;
+
+      color: rgba(138, 31, 31, 0.6);
+      font-size: 11px;
+      font-weight: 550;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      padding-bottom: 0.4em;
+      padding-left: 0.15em;
+      border-bottom: 1px solid rgba(138, 31, 31, 0.8);
+      white-space: pre;
+    }
+
+    .links li:nth-child(1) {
+      left: 63%
+    }
+
+    .links li:nth-child(2) {
+      transform: rotate(90deg);
+      right: 0;
+      top: 60vh;
+      width: 0;
+      height: 0;
+    }
+
+    .links li:nth-child(3) {
+      bottom: 0;
+      left: 30vw;
+    }
+    .links li:nth-child(3) a {
+      bottom: 0;
+      left: 30vw;
+      padding-top: 0.5em;
+      border-top: 1px solid rgba(138, 31, 31, 0.8);
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .links li:nth-child(4) {
+      transform: rotate(-90deg);
+      left: 0;
+      bottom: 63vh;
+      width: 0;
+      height: 0;
+    }
+    </style>
+  </head>
     <body>
-        <div class="intro">
-            <h1>Colleen Baisa</h1>
-            <h2>A creative producer, strategist, and writer</h2>
-            <h3>Based in Los Angeles, CA</h2>
-        </div>
-        <ul class="links">
-            <li>
-                <a href="mailto:colleen.baisa@gmail.com">email</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/cbaisa/" target="_blank">LinkedIn</a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/colleen.baisa/" target="_blank">Insta</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/colleenbaisa" target="_blank">Twitter</a>
-            </li>
-        </ul>
+      <div class="gradient-background"></div>
+      <div class="intro">
+        <h1>Colleen Baisa</h1>
+        <h2>A creative maker and writer</h2>
+        <h3>Based in Los Angeles, CA</h3>
+        <h4>she/her/siya</h4>
+      </div>
+      <ul class="links">
+        <li>
+          <a href="mailto:colleen.baisa@gmail.com">email</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/cbaisa/" target="_blank">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/colleen.baisa/" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="http://slumbermag.com" target="_blank">Slumber Mag</a>
+        </li>
+      </ul>
     </body>
 </html>
